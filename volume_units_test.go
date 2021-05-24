@@ -37,3 +37,7 @@ func TestVolumeSystems(t *testing.T) {
 	assert.Equal(t, US, FluidGallon.System())
 	assert.Equal(t, US, CustomaryFluidOunce.System())
 }
+
+func TestVolumeConversion(t *testing.T) {
+	assert.Equal(t, NewValue(1, M3).MustConvert(Liter).Float(), 1000.0)
+}

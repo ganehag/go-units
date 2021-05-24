@@ -22,6 +22,9 @@ var (
 	FemtoLiter = Femto(Liter)
 	AttoLiter  = Atto(Liter)
 
+	// volu-metric
+	M3 = NewUnit("cubicmeter", "m3", Volume, SI, UnitOptionAliases("cubicmetre"))
+
 	// imperial
 	Quart      = NewUnit("quart", "qt", Volume, BI)
 	Pint       = NewUnit("pint", "pt", Volume, BI)
@@ -36,6 +39,8 @@ var (
 )
 
 func init() {
+	NewRatioConversion(M3, Liter, 1000)
+
 	NewRatioConversion(Quart, Liter, 1.1365225)
 	NewRatioConversion(Pint, Liter, 0.56826125)
 	NewRatioConversion(Gallon, Liter, 4.54609)
