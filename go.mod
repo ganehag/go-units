@@ -1,6 +1,6 @@
-module github.com/bcicen/go-units
+module github.com/ganehag/go-units
 
-go 1.15
+go 1.16
 
 require (
 	github.com/Knetic/govaluate v3.0.0+incompatible
